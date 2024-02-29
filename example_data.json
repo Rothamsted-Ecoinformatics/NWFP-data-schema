@@ -1,0 +1,17 @@
+{
+    "catchmentId":1,
+    "displayName":"Catchment 1",
+    "farmlet":{
+        "farmletId":2,
+        "displayName":"Red Farmlet",
+        "boundary": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0],
+                    [100.0, 0.0]
+                ]
+            ]
+        }
+    }
+}
