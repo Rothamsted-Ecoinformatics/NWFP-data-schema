@@ -1,0 +1,34 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://nwfp.rothamsted.ac.uk/catchment.schema.json",
+    "title": "NWFP Catchment",
+    "description": "Describes a catchment from the North Wyke Farm Platform.",
+    "type": "object",
+    "properties": {
+        "schemaId": {
+            "description": "The unique identifier for a catchment",
+            "type": "integer" 
+        }, 
+        "displayName": {
+            "description":"The display name for the catchment",
+            "type":"string"
+        },
+        "farmlet": {
+            "$ref":"https://nwfp.rothamsted.ac.uk/catchment.schema.json"
+        },
+        "boundary": {
+            "description": "The boundary of the farmlet",
+            "anyOf": [
+                {
+                  "$ref": "http://geojson.org/schema/MultiPolygon.json"
+                },
+                {
+                  "$ref": "http://geojson.org/schema/Polygon.json"
+                }
+            ]            
+        }
+
+    }
+
+
+}
