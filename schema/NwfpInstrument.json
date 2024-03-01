@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://nwfp.rothamsted.ac.uk/schema/NwfpInstrument.json",
+    "title": "NWFP Instrument",
+    "description": "Describes an instrument used to measure something on the North Wyke Farm Platform.",
+    "type": "object",
+    "properties": {
+        "instrumentId": {
+            "description": "The unique identifier for a instrument",
+            "type": "integer" 
+        }, 
+        "displayName": {
+            "description":"The display name for the instrument",
+            "type":"string"
+        },
+        "location": {
+            "description": "The point location of the instrument",
+            "oneOf": [
+                {
+                  "$ref": "http://geojson.org/schema/Point.json"
+                }
+            ]            
+        }
+    }
+}

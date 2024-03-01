@@ -14,7 +14,13 @@ def validate_json(json_data, json_schema):
             referrer=json_schema, 
             store={
                 'http://geojson.org/schema/MultiPolygon.json': load_json_file('geojson/MultiPolygon.json'),
-                'http://geojson.org/schema/Polygon.json': load_json_file('geojson/Polygon.json')
+                'http://geojson.org/schema/Polygon.json': load_json_file('geojson/Polygon.json'),
+                'http://geojson.org/schema/Point.json': load_json_file('geojson/Point.json'),
+                'https://nwfp.rothamsted.ac.uk/schema/NwfpFarmlet.json': load_json_file('schema/NwfpFarmlet.json'),
+                'https://nwfp.rothamsted.ac.uk/schema/NwfpCatchment.json': load_json_file('schema/NwfpCatchment.json'),
+                'https://nwfp.rothamsted.ac.uk/schema/NwfpField.json': load_json_file('schema/NwfpField.json'),
+                'https://nwfp.rothamsted.ac.uk/schema/NwfpManagementEvent.json': load_json_file('schema/NwfpManagementEvent.json'),
+                'https://nwfp.rothamsted.ac.uk/schema/NwfpInstrument.json': load_json_file('schema/NwfpInstrument.json')
             }
         )
         validator = Draft7Validator(json_schema,resolver=resolver)
@@ -26,11 +32,11 @@ def validate_json(json_data, json_schema):
 
 def main():
     # Load the JSON schema
-    schema_file = 'nwfp-catchment-schema.json'
+    schema_file = 'schema/NwfpCatchment.json'
     json_schema = load_json_file(schema_file)
 
     # Load the JSON file to be validated
-    json_file = 'example_data.json'  # replace this with your actual JSON file
+    json_file = 'examples/basic_example_data.json'  # replace this with your actual JSON file
     json_data = load_json_file(json_file)
 
     # Validate JSON data against the schema

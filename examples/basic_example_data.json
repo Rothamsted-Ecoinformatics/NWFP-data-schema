@@ -13,5 +13,17 @@
                 ]
             ]
         }
-    }
+    },
+    "fields": [
+        {
+            "fieldId":10,
+            "farmletId":2,
+            "displayName":"field 10"
+        },
+        {
+            "fieldId":11,
+            "farmletId":2,
+            "displayName":"field 11"
+        }
+    ]
 }

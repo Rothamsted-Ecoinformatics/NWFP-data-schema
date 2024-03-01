@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://nwfp.rothamsted.ac.uk/schema/NwfpMeasurement.json",
+    "title": "NWFP Measurement",
+    "description": "Describes a measurement made on the North Wyke Farm Platform.",
+    "type": "object",
+    "properties": {
+        "measurementId": {
+            "description": "The unique identifier for a measurement",
+            "type": "integer" 
+        }, 
+        "label": {
+            "description": "An abbreviated label with no spacing or special characters",
+            "type": "string"
+        },
+        "displayName": {
+            "description":"The descriptive display name for the measurement.",
+            "type":"string"
+        },
+        "definition": {
+            "description":"A formal definition for the measurement.",
+            "type":"string"
+        },
+        "unit": {
+            "description": "The unit for the measurement",
+            "type":"object",
+            "properties": {
+                "displayName": {
+                    "description": "The display name for the unit, for example milligram per litre",
+                    "type":"string"
+                },
+                "symbol": {
+                    "description": "The symbol used to represent the unit, for example mg/l",
+                    "type":"string"
+                }
+            }            
+        },
+        "synonyms": {
+            "description": "The vocabulary synonyms associated with the term.",
+            "type":"array",
+            "items":{
+                "description": "The list of synonyms",
+                "type":"object",
+                "properties": {
+                    "termLable": {
+                        "description": "The label or name for the synonym term",
+                        "type":"string"
+                    },
+                    "termURI": {
+                        "description": "The URI for the term",
+                        "type":"string"
+                    },
+                    "vocabulary": {
+                        "description": "The source vocabulary or ontology for the term",
+                        "type":"string"
+                    }
+                }
+            }
+        }
+    }
+}
