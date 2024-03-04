@@ -8,6 +8,48 @@
         "managementEventId": {
             "description": "The unique identifier for the event",
             "type": "integer" 
+        },
+        "eventName": {
+            "description": "The name for the event",
+            "type":"string"
+        },
+        "eventLocation": {
+            "description": "The location associated with the event. it could be a boundary or point.",
+            "anyOf": [
+                {
+                    "$ref": "http://geojson.org/schema/Point.json"
+                },
+                {
+                    "$ref": "http://geojson.org/schema/MultiPolygon.json"
+                },
+                {
+                    "$ref": "http://geojson.org/schema/Polygon.json"
+                }
+            ] 
+        },
+        "eventDate": {
+            "description": "The date the event occurred",
+            "type":"string",
+            "format":"date" 
+        },
+        "timeIn": {
+            "description": "The time the event started",
+            "type":"string",
+            "format":"time"
+        },
+        "timeOut": {
+            "description": "The time the event ended",
+            "type":"string",
+            "format":"time"
+        },
+        "applicationType": {
+            "description": "Classification for the type of application @todo map these to ontology/vocabulary terms",
+            "type":"string",
+            "enum": ["Organic Fertilizer", "Fertilizer"]
+        },
+        "product": {
+            "description": "The name of the product applied.",
+            "type":"string"
         }
     }
 }
