@@ -35,6 +35,23 @@
                 }
             }            
         },
+        "LLO": {
+            "description": "@todo description",
+            "type":"number"
+        },
+        "ULO": {
+            "description": "@todo description",
+            "type":"number"
+        },
+        "group": {
+            "description": "@todo description",
+            "type":"string",
+            "enum": ["carbon dioxide","methane","air","core","nitrous oxide","wind","meteorological sensors","footprint"]
+        },
+        "systemSetQuality": {
+            "description": "@todo Description",
+            "type":"boolean"
+        },
         "synonyms": {
             "description": "The vocabulary synonyms associated with the term.",
             "type":"array",
@@ -42,7 +59,7 @@
                 "description": "The list of synonyms",
                 "type":"object",
                 "properties": {
-                    "termLable": {
+                    "termLabel": {
                         "description": "The label or name for the synonym term",
                         "type":"string"
                     },
@@ -56,6 +73,29 @@
                     }
                 }
             }
+        }, 
+        "observations": {
+            "description": "The measured observations.",
+            "type":"array",
+            "items": {
+                "type":"object",
+                "properties": {
+                    "value": {
+                        "description": "The quantity of the measurement.",
+                        "type":"number"
+                    },
+                    "datetime": {
+                        "description": "The date and time when the measurement was made",
+                        "type":"string",
+                        "format": "date-time"
+                    },
+                    "dataQuality": {
+                        "description": "The date and time when the measurement was made",
+                        "type":"string",
+                        "enum": ["Acceptable"]
+                    }
+                }
+            }            
         }
     }
 }

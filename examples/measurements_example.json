@@ -1,0 +1,90 @@
+{
+    "catchmentId":1,
+    "displayName":"Catchment 1",
+    "farmlet":{
+        "farmletId":2,
+        "displayName":"Red Farmlet",
+        "boundary": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0],
+                    [100.0, 0.0]
+                ]
+            ]
+        }
+    },
+    "fields": [
+        {
+            "fieldId":10,
+            "farmletId":2,
+            "displayName":"field 10",
+            "instruments": [
+                {
+                    "instrumentId":8,
+                    "displayName":"Gas sensor 4",
+                    "location": {
+                        "type": "Point",
+                        "coordinates": [100.01,0.1]
+                    },
+                    "measurements": [
+                        {
+                            "measurementId": 17,
+                            "label": "CH4_1_1_1",
+                            "displayName": "Methane Concentration",
+                            "unit": {
+                                "displayName": "nanomoles methane per mole",
+                                "symbol":"nmol CH^4^/mol"
+                            },
+                            "group": "methane",
+                            "observations": [
+                                {
+                                    "datetime": "2016-12-17T00:15:00.000Z",
+                                    "value": 0.00012,
+                                    "dataQuality":"Acceptable"
+                                },
+                                {
+                                    "datetime": "2016-12-17T00:30:00.000Z",
+                                    "value": 0.00013,
+                                    "dataQuality":"Acceptable"
+                                },
+                                {
+                                    "datetime": "2016-12-17T00:45:00.000Z",
+                                    "value": 0.00012,
+                                    "dataQuality":"Acceptable"
+                                }
+                            ]
+                        },
+                        {
+                            "measurementId": 18,
+                            "label": "CO2_1_1_1",
+                            "displayName": "Carbon Dioxide Concentration",
+                            "unit": {
+                                "displayName": "nanomoles carbon dioxide per mole",
+                                "symbol":"nmol CO^2^/mol"
+                            },
+                            "group": "carbon dioxide",
+                            "observations": [
+                                {
+                                    "datetime": "2016-12-17T00:15:00.000Z",
+                                    "value": 0.0044,
+                                    "dataQuality":"Acceptable"
+                                },
+                                {
+                                    "datetime": "2016-12-17T00:30:00.000Z",
+                                    "value": 0.0050,
+                                    "dataQuality":"Acceptable"
+                                },
+                                {
+                                    "datetime": "2016-12-17T00:45:00.000Z",
+                                    "value": 0.0051,
+                                    "dataQuality":"Acceptable"
+                                }
+                            ]
+                        }
+                    ]
+                }        
+            ]            
+        }
+    ]
+}

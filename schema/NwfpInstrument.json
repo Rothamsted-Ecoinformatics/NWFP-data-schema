@@ -20,6 +20,15 @@
                   "$ref": "http://geojson.org/schema/Point.json"
                 }
             ]            
+        },
+        "measurements" : {
+            "description":"measurements made by with the instrument",
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+                "$ref":"https://nwfp.rothamsted.ac.uk/schema/NwfpMeasurement.json"
+            }
         }
     }
 }

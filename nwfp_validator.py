@@ -20,7 +20,8 @@ def validate_json(json_data, json_schema):
                 'https://nwfp.rothamsted.ac.uk/schema/NwfpCatchment.json': load_json_file('schema/NwfpCatchment.json'),
                 'https://nwfp.rothamsted.ac.uk/schema/NwfpField.json': load_json_file('schema/NwfpField.json'),
                 'https://nwfp.rothamsted.ac.uk/schema/NwfpManagementEvent.json': load_json_file('schema/NwfpManagementEvent.json'),
-                'https://nwfp.rothamsted.ac.uk/schema/NwfpInstrument.json': load_json_file('schema/NwfpInstrument.json')
+                'https://nwfp.rothamsted.ac.uk/schema/NwfpInstrument.json': load_json_file('schema/NwfpInstrument.json'),
+                'https://nwfp.rothamsted.ac.uk/schema/NwfpMeasurement.json': load_json_file('schema/NwfpMeasurement.json')
             }
         )
         validator = Draft7Validator(json_schema,resolver=resolver)
@@ -36,7 +37,7 @@ def main():
     json_schema = load_json_file(schema_file)
 
     # Load the JSON file to be validated
-    json_file = 'examples/basic_example_data.json'  # replace this with your actual JSON file
+    json_file = 'examples/measurements_example.json'  # replace this with your actual JSON file
     json_data = load_json_file(json_file)
 
     # Validate JSON data against the schema
