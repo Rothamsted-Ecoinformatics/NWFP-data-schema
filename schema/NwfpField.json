@@ -34,13 +34,13 @@
                 "$ref":"https://nwfp.rothamsted.ac.uk/schema/NwfpInstrument.json"
             }
         },
-        "managementEvents": {
-            "description":"The management events associated with the field",
+        "fieldEvents": {
+            "description":"The field events associated with the field",
             "type": "array",
             "minItems": 1,
             "uniqueItems": true,
             "items": {
-                "$ref":"https://nwfp.rothamsted.ac.uk/schema/NwfpManagementEvent.json"            
+                "$ref":"https://nwfp.rothamsted.ac.uk/schema/NwfpFieldEvent.json"            
             }
         }
     }
