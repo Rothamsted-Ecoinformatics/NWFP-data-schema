@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://nwfp.rothamsted.ac.uk/schema/NwfpAnimal.json",
+    "title": "NWFP Management Event",
+    "description": "Describes an animal on the North Wyke Farm Platform.",
+    "type": "object",
+    "properties": {
+        "animalId": {
+            "description": "The unique identifier for the animal",
+            "type": "integer" 
+        },
+        "officialTag": {
+            "description": "The official tag assigned to the animal for tracking.",
+            "type":"string"
+        },
+        "managementTag": {
+            "description": "The official tag ID assigned to the animal for tracking management.",
+            "type":"string"
+        },
+        "dateOfBirth": {
+            "type":"string",
+            "format": "date"
+        },
+        "grazingYearStart": {
+            "description": "@todo",
+            "type": "integer"
+        },
+        "grazingYearEnd": {
+            "description": "@todo",
+            "type":"integer"
+        },
+        "gender": {
+            "type":"string",
+            "enum": ["male","female"]
+        },
+        "farmlet": {
+            "description":"The farmlet the animal belongs to",
+            "$ref":"https://nwfp.rothamsted.ac.uk/schema/NwfpFarmlet.json"
+        },
+        "sire": {
+            "$ref":"https://nwfp.rothamsted.ac.uk/schema/NwfpAnimal.json"
+        },
+        "birthDam": {
+            "$ref":"https://nwfp.rothamsted.ac.uk/schema/NwfpAnimal.json"
+        },
+        "rearingDam": {
+            "$ref":"https://nwfp.rothamsted.ac.uk/schema/NwfpAnimal.json"
+        },
+        "birthLitterSize": {
+            "description": "@todo",
+            "type":"integer"
+        },
+        "rearingLitterSize": {
+            "description": "@todo",
+            "type":"integer"
+        },
+        "animalCategory": {
+            "type":"string",
+            "enum": ["cattle","sheep"]
+        },
+        "isBreedingAnimal": {
+            "type":"boolean"
+        }
+    }
+}
